@@ -51,12 +51,23 @@ void mergeSort(vector<int> &nums, int p, int q){
     }
 }
 
+//buble sort.
+void buble_sort(vector<int> &nums){
+    for(int i = 0; i < nums.size(); ++i){
+        for(int j = 0; j < nums.size() - 1; ++j){
+            if(nums[j] > nums[j + 1])
+                swap(nums[j],nums[j + 1]);
+        }
+    }
+}
+
 int main()
 {
     vector<int> nums = {100,39,2,40, 32,32, 435, 543, 214523};
 
     //incertSort(nums);
     //mergeSort(nums, 0, nums.size() - 1);
+    buble_sort(nums);
     for(auto &i : nums)
     {
         cout << i  << " ";
