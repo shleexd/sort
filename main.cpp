@@ -61,17 +61,22 @@ void buble_sort(vector<int> &nums){
     }
 }
 
-int main()
+int main(int argc, char *argv[])
 {
-    vector<int> nums = {100,39,2,40, 32,32, 435, 543, 214523};
-
+    
+    //vector<int> nums = {100,39,2,40, 32,32, 435, 543, 214523};
+    vector<int> nums;
+    int data;
+    while(std::cin >> data){
+        nums.push_back(data);
+    }
     //incertSort(nums);
     //mergeSort(nums, 0, nums.size() - 1);
+    
     buble_sort(nums);
     for(auto &i : nums)
     {
-        cout << i  << " ";
+        cout << i  << " " << std::endl;
     }
-    cout << endl;
     return 0;
 }
